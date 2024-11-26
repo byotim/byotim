@@ -1,0 +1,216 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    background-color: #fafafa;
+    color: #262653;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+header .logo {
+    width: 80px; /* Reduzido para melhor visualização em telas pequenas */
+    height: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 2rem; /* Tamanho reduzido para dispositivos móveis */
+    margin: 0;
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px; /* Menor espaçamento para caber em telas menores */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem; /* Ajuste no tamanho da fonte */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seções */
+section {
+    padding: 30px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#sobre p {
+    font-size: 1.4rem;
+}
+
+/* Estilo para a seção de Serviços */
+#servicos {
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+#servicos .servico {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#servicos .servico h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+#servicos .servico p {
+    font-size: 1.3rem;
+}
+
+/* Usando flexbox para alinhar os serviços lado a lado */
+#servicos .servicos-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#servicos .servicos-container .servico {
+    width: 30%;
+    margin: 0;
+}
+
+#servicos ul {
+    list-style: none;
+    padding: 0;
+}
+
+#servicos li {
+    margin: 20px 0;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-size: 1.3rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #004494;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+/* Media Queries para telas pequenas (modo mobile) */
+@media (max-width: 768px) {
+    header .logo {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Tamanho menor para o título */
+    }
+
+   
+
+    nav ul li {
+        display: none;
+    }
+
+    #servicos .servicos-container {
+        flex-direction: column; /* Alinha os serviços em coluna */
+    }
+
+    #servicos .servicos-container .servico {
+        width: 100%; /* Cada item ocupa a tela inteira em modo móvel */
+        margin: 10px 0;
+    }
+
+    form input, form textarea {
+        max-width: 100%; /* Permite o preenchimento da largura total da tela */
+    }
+
+    footer {
+        padding: 20px; /* Aumenta o espaçamento para rodapé */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem; /* Diminui ainda mais o título para telas menores */
+    }
+
+    nav ul li a {
+        display: none;
+    }
+
+    form input, form textarea {
+        max-width: 100%; /* Permite que o formulário ocupe toda a largura */
+    }
+}
